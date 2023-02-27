@@ -12,7 +12,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Person = void 0;
 const graphql_1 = require("@nestjs/graphql");
 const gender_enum_1 = require("../gender.enum");
-const create_address_input_1 = require("../../addresses/dto/create-address.input");
 let Person = class Person {
 };
 __decorate([
@@ -32,8 +31,8 @@ __decorate([
     __metadata("design:type", String)
 ], Person.prototype, "gender", void 0);
 __decorate([
-    (0, graphql_1.Field)(() => create_address_input_1.CreateAddressInput, { description: 'adresse de la personne' }),
-    __metadata("design:type", create_address_input_1.CreateAddressInput)
+    (0, graphql_1.Field)(() => String, { description: 'adresse de la personne' }),
+    __metadata("design:type", String)
 ], Person.prototype, "address", void 0);
 Person = __decorate([
     (0, graphql_1.ObjectType)()
