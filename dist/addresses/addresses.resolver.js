@@ -32,7 +32,7 @@ let AddressesResolver = class AddressesResolver {
         return this.addressesService.findOne(id);
     }
     updateAddress(updateAddressInput) {
-        return this.addressesService.update(parseInt(updateAddressInput.id), updateAddressInput);
+        return this.addressesService.update(updateAddressInput.id, updateAddressInput);
     }
     removeAddress(id) {
         return this.addressesService.remove(id);
@@ -55,7 +55,7 @@ __decorate([
     (0, graphql_1.Query)(() => address_entity_1.Address, { name: 'address' }),
     __param(0, (0, graphql_1.Args)('id', { type: () => graphql_1.Int })),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Number]),
+    __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], AddressesResolver.prototype, "findOne", null);
 __decorate([
@@ -69,7 +69,7 @@ __decorate([
     (0, graphql_1.Mutation)(() => address_entity_1.Address),
     __param(0, (0, graphql_1.Args)('id', { type: () => graphql_1.Int })),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Number]),
+    __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], AddressesResolver.prototype, "removeAddress", null);
 AddressesResolver = __decorate([

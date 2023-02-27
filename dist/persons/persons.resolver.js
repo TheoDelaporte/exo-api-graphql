@@ -18,11 +18,9 @@ const persons_service_1 = require("./persons.service");
 const person_entity_1 = require("./entities/person.entity");
 const create_person_input_1 = require("./dto/create-person.input");
 const update_person_input_1 = require("./dto/update-person.input");
-const addresses_service_1 = require("../addresses/addresses.service");
 let PersonsResolver = class PersonsResolver {
-    constructor(personsService, addressesService) {
+    constructor(personsService) {
         this.personsService = personsService;
-        this.addressesService = addressesService;
     }
     createPerson(createPersonInput) {
         return this.personsService.create(createPersonInput);
@@ -57,7 +55,7 @@ __decorate([
     (0, graphql_1.Query)(() => person_entity_1.Person, { name: 'person' }),
     __param(0, (0, graphql_1.Args)('id', { type: () => graphql_1.Int })),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Number]),
+    __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], PersonsResolver.prototype, "findOne", null);
 __decorate([
@@ -71,13 +69,12 @@ __decorate([
     (0, graphql_1.Mutation)(() => person_entity_1.Person),
     __param(0, (0, graphql_1.Args)('id', { type: () => graphql_1.Int })),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Number]),
+    __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], PersonsResolver.prototype, "removePerson", null);
 PersonsResolver = __decorate([
     (0, graphql_1.Resolver)(() => person_entity_1.Person),
-    __metadata("design:paramtypes", [persons_service_1.PersonsService,
-        addresses_service_1.AddressesService])
+    __metadata("design:paramtypes", [persons_service_1.PersonsService])
 ], PersonsResolver);
 exports.PersonsResolver = PersonsResolver;
 //# sourceMappingURL=persons.resolver.js.map

@@ -17,8 +17,8 @@ const create_address_input_1 = require("../../addresses/dto/create-address.input
 let UpdatePersonInput = class UpdatePersonInput extends (0, graphql_1.PartialType)(create_person_input_1.CreatePersonInput) {
 };
 __decorate([
-    (0, graphql_1.Field)(() => graphql_1.Int, { description: 'id de la personne' }),
-    __metadata("design:type", Number)
+    (0, graphql_1.Field)(() => String, { description: 'id de la personne' }),
+    __metadata("design:type", String)
 ], UpdatePersonInput.prototype, "id", void 0);
 __decorate([
     (0, graphql_1.Field)(() => String, { description: 'nom de la personne' }),

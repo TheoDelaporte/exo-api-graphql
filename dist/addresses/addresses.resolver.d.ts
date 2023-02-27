@@ -4,9 +4,9 @@ import { UpdateAddressInput } from './dto/update-address.input';
 export declare class AddressesResolver {
     private readonly addressesService;
     constructor(addressesService: AddressesService);
-    createAddress(createAddressInput: CreateAddressInput): string;
-    findAll(): string;
-    findOne(id: number): string;
-    updateAddress(updateAddressInput: UpdateAddressInput): string;
-    removeAddress(id: number): string;
+    createAddress(createAddressInput: CreateAddressInput): import(".prisma/client").Prisma.Prisma__AddressClient<import(".prisma/client").Address, never>;
+    findAll(): import(".prisma/client").Prisma.PrismaPromise<import(".prisma/client").Address[]>;
+    findOne(id: string): import(".prisma/client").Prisma.Prisma__AddressClient<import(".prisma/client").Address, never>;
+    updateAddress(updateAddressInput: UpdateAddressInput): import(".prisma/client").Prisma.Prisma__AddressClient<import(".prisma/client").Address, never>;
+    removeAddress(id: string): import(".prisma/client").Prisma.Prisma__AddressClient<import(".prisma/client").Address, never>;
 }
