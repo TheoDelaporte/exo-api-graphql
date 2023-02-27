@@ -18,9 +18,11 @@ const persons_service_1 = require("./persons.service");
 const person_entity_1 = require("./entities/person.entity");
 const create_person_input_1 = require("./dto/create-person.input");
 const update_person_input_1 = require("./dto/update-person.input");
+const addresses_service_1 = require("../addresses/addresses.service");
 let PersonsResolver = class PersonsResolver {
-    constructor(personsService) {
+    constructor(personsService, addressesService) {
         this.personsService = personsService;
+        this.addressesService = addressesService;
     }
     createPerson(createPersonInput) {
         return this.personsService.create(createPersonInput);
@@ -74,7 +76,8 @@ __decorate([
 ], PersonsResolver.prototype, "removePerson", null);
 PersonsResolver = __decorate([
     (0, graphql_1.Resolver)(() => person_entity_1.Person),
-    __metadata("design:paramtypes", [persons_service_1.PersonsService])
+    __metadata("design:paramtypes", [persons_service_1.PersonsService,
+        addresses_service_1.AddressesService])
 ], PersonsResolver);
 exports.PersonsResolver = PersonsResolver;
 //# sourceMappingURL=persons.resolver.js.map

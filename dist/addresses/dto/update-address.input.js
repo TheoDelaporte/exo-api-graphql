@@ -15,6 +15,10 @@ const graphql_1 = require("@nestjs/graphql");
 let UpdateAddressInput = class UpdateAddressInput extends (0, graphql_1.PartialType)(create_address_input_1.CreateAddressInput) {
 };
 __decorate([
+    (0, graphql_1.Field)(() => String, { description: 'id' }),
+    __metadata("design:type", String)
+], UpdateAddressInput.prototype, "id", void 0);
+__decorate([
     (0, graphql_1.Field)(() => String, { description: 'rue' }),
     __metadata("design:type", String)
 ], UpdateAddressInput.prototype, "street", void 0);

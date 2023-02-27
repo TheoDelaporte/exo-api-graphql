@@ -7,6 +7,6 @@ export declare class AddressesResolver {
     createAddress(createAddressInput: CreateAddressInput): string;
     findAll(): string;
     findOne(id: number): string;
-    updateAddress(updateAddressInput: UpdateAddressInput): void;
+    updateAddress(updateAddressInput: UpdateAddressInput): string;
     removeAddress(id: number): string;
 }

@@ -32,6 +32,7 @@ let AddressesResolver = class AddressesResolver {
         return this.addressesService.findOne(id);
     }
     updateAddress(updateAddressInput) {
+        return this.addressesService.update(parseInt(updateAddressInput.id), updateAddressInput);
     }
     removeAddress(id) {
         return this.addressesService.remove(id);

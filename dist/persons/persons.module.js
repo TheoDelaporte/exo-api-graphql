@@ -10,11 +10,12 @@ exports.PersonsModule = void 0;
 const common_1 = require("@nestjs/common");
 const persons_service_1 = require("./persons.service");
 const persons_resolver_1 = require("./persons.resolver");
+const addresses_service_1 = require("../addresses/addresses.service");
 let PersonsModule = class PersonsModule {
 };
 PersonsModule = __decorate([
     (0, common_1.Module)({
-        providers: [persons_resolver_1.PersonsResolver, persons_service_1.PersonsService]
+        providers: [persons_resolver_1.PersonsResolver, persons_service_1.PersonsService, addresses_service_1.AddressesService]
     })
 ], PersonsModule);
 exports.PersonsModule = PersonsModule;

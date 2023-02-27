@@ -14,6 +14,10 @@ const graphql_1 = require("@nestjs/graphql");
 let Address = class Address {
 };
 __decorate([
+    (0, graphql_1.Field)(() => String, { description: 'id' }),
+    __metadata("design:type", String)
+], Address.prototype, "id", void 0);
+__decorate([
     (0, graphql_1.Field)(() => String, { description: 'rue' }),
     __metadata("design:type", String)
 ], Address.prototype, "street", void 0);
